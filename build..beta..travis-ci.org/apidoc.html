@@ -1,0 +1,2695 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+
+        href="https://github.com/mikedeboer/node-github"
+
+    >github (v9.2.0)</a>
+</h1>
+<h4>NodeJS wrapper for the GitHub API</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.github">module github</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">github.</span>error</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">github.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.github.error">module github.error</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.400">
+            function <span class="apidocSignatureSpan">github.error.</span>400
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.401">
+            function <span class="apidocSignatureSpan">github.error.</span>401
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.402">
+            function <span class="apidocSignatureSpan">github.error.</span>402
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.403">
+            function <span class="apidocSignatureSpan">github.error.</span>403
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.404">
+            function <span class="apidocSignatureSpan">github.error.</span>404
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.405">
+            function <span class="apidocSignatureSpan">github.error.</span>405
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.406">
+            function <span class="apidocSignatureSpan">github.error.</span>406
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.407">
+            function <span class="apidocSignatureSpan">github.error.</span>407
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.408">
+            function <span class="apidocSignatureSpan">github.error.</span>408
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.409">
+            function <span class="apidocSignatureSpan">github.error.</span>409
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.410">
+            function <span class="apidocSignatureSpan">github.error.</span>410
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.411">
+            function <span class="apidocSignatureSpan">github.error.</span>411
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.412">
+            function <span class="apidocSignatureSpan">github.error.</span>412
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.413">
+            function <span class="apidocSignatureSpan">github.error.</span>413
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.414">
+            function <span class="apidocSignatureSpan">github.error.</span>414
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.415">
+            function <span class="apidocSignatureSpan">github.error.</span>415
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.416">
+            function <span class="apidocSignatureSpan">github.error.</span>416
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.417">
+            function <span class="apidocSignatureSpan">github.error.</span>417
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.420">
+            function <span class="apidocSignatureSpan">github.error.</span>420
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.422">
+            function <span class="apidocSignatureSpan">github.error.</span>422
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.423">
+            function <span class="apidocSignatureSpan">github.error.</span>423
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.424">
+            function <span class="apidocSignatureSpan">github.error.</span>424
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.425">
+            function <span class="apidocSignatureSpan">github.error.</span>425
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.426">
+            function <span class="apidocSignatureSpan">github.error.</span>426
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.428">
+            function <span class="apidocSignatureSpan">github.error.</span>428
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.429">
+            function <span class="apidocSignatureSpan">github.error.</span>429
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.431">
+            function <span class="apidocSignatureSpan">github.error.</span>431
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.444">
+            function <span class="apidocSignatureSpan">github.error.</span>444
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.449">
+            function <span class="apidocSignatureSpan">github.error.</span>449
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.499">
+            function <span class="apidocSignatureSpan">github.error.</span>499
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.500">
+            function <span class="apidocSignatureSpan">github.error.</span>500
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.501">
+            function <span class="apidocSignatureSpan">github.error.</span>501
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.502">
+            function <span class="apidocSignatureSpan">github.error.</span>502
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.503">
+            function <span class="apidocSignatureSpan">github.error.</span>503
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.504">
+            function <span class="apidocSignatureSpan">github.error.</span>504
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.505">
+            function <span class="apidocSignatureSpan">github.error.</span>505
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.506">
+            function <span class="apidocSignatureSpan">github.error.</span>506
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.507">
+            function <span class="apidocSignatureSpan">github.error.</span>507
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.508">
+            function <span class="apidocSignatureSpan">github.error.</span>508
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.509">
+            function <span class="apidocSignatureSpan">github.error.</span>509
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.510">
+            function <span class="apidocSignatureSpan">github.error.</span>510
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.511">
+            function <span class="apidocSignatureSpan">github.error.</span>511
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.BadGateway">
+            function <span class="apidocSignatureSpan">github.error.</span>BadGateway
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.BadRequest">
+            function <span class="apidocSignatureSpan">github.error.</span>BadRequest
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.BandwidthLimitExceeded">
+            function <span class="apidocSignatureSpan">github.error.</span>BandwidthLimitExceeded
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.ClientClosedRequest">
+            function <span class="apidocSignatureSpan">github.error.</span>ClientClosedRequest
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Conflict">
+            function <span class="apidocSignatureSpan">github.error.</span>Conflict
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.EnhanceYourCalm">
+            function <span class="apidocSignatureSpan">github.error.</span>EnhanceYourCalm
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.ExpectationFailed">
+            function <span class="apidocSignatureSpan">github.error.</span>ExpectationFailed
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.FailedDependency">
+            function <span class="apidocSignatureSpan">github.error.</span>FailedDependency
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Forbidden">
+            function <span class="apidocSignatureSpan">github.error.</span>Forbidden
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.GatewayTimeout">
+            function <span class="apidocSignatureSpan">github.error.</span>GatewayTimeout
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Gone">
+            function <span class="apidocSignatureSpan">github.error.</span>Gone
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.HttpError">
+            function <span class="apidocSignatureSpan">github.error.</span>HttpError
+            <span class="apidocSignatureSpan">(message, code, headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.HttpVersionNotSupported">
+            function <span class="apidocSignatureSpan">github.error.</span>HttpVersionNotSupported
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.InsufficientStorage">
+            function <span class="apidocSignatureSpan">github.error.</span>InsufficientStorage
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.InternalServerError">
+            function <span class="apidocSignatureSpan">github.error.</span>InternalServerError
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.LengthRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>LengthRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Locked">
+            function <span class="apidocSignatureSpan">github.error.</span>Locked
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.LoopDetected">
+            function <span class="apidocSignatureSpan">github.error.</span>LoopDetected
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.MethodNotAllowed">
+            function <span class="apidocSignatureSpan">github.error.</span>MethodNotAllowed
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NetworkAuthenticationRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>NetworkAuthenticationRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NoResponse">
+            function <span class="apidocSignatureSpan">github.error.</span>NoResponse
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NotAcceptable">
+            function <span class="apidocSignatureSpan">github.error.</span>NotAcceptable
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NotExtended">
+            function <span class="apidocSignatureSpan">github.error.</span>NotExtended
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NotFound">
+            function <span class="apidocSignatureSpan">github.error.</span>NotFound
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.NotImplemented">
+            function <span class="apidocSignatureSpan">github.error.</span>NotImplemented
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.PaymentRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>PaymentRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.PreconditionFailed">
+            function <span class="apidocSignatureSpan">github.error.</span>PreconditionFailed
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.PreconditionRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>PreconditionRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.ProxyAuthenticationRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>ProxyAuthenticationRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Request-uriTooLong">
+            function <span class="apidocSignatureSpan">github.error.</span>Request-uriTooLong
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.RequestEntityTooLarge">
+            function <span class="apidocSignatureSpan">github.error.</span>RequestEntityTooLarge
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.RequestHeaderFieldsTooLarge">
+            function <span class="apidocSignatureSpan">github.error.</span>RequestHeaderFieldsTooLarge
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.RequestTimeout">
+            function <span class="apidocSignatureSpan">github.error.</span>RequestTimeout
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.RequestedRangeNotSatisfiable">
+            function <span class="apidocSignatureSpan">github.error.</span>RequestedRangeNotSatisfiable
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.RetryWith">
+            function <span class="apidocSignatureSpan">github.error.</span>RetryWith
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.ServiceUnavailable">
+            function <span class="apidocSignatureSpan">github.error.</span>ServiceUnavailable
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.TooManyRequests">
+            function <span class="apidocSignatureSpan">github.error.</span>TooManyRequests
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.Unauthorized">
+            function <span class="apidocSignatureSpan">github.error.</span>Unauthorized
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.UnorderedCollection">
+            function <span class="apidocSignatureSpan">github.error.</span>UnorderedCollection
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.UnprocessableEntity">
+            function <span class="apidocSignatureSpan">github.error.</span>UnprocessableEntity
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.UnsupportedMediaType">
+            function <span class="apidocSignatureSpan">github.error.</span>UnsupportedMediaType
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.UpgradeRequired">
+            function <span class="apidocSignatureSpan">github.error.</span>UpgradeRequired
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.error.VariantAlsoNegotiates">
+            function <span class="apidocSignatureSpan">github.error.</span>VariantAlsoNegotiates
+            <span class="apidocSignatureSpan">(msg)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.github.util">module github.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.escapeRegExp">
+            function <span class="apidocSignatureSpan">github.util.</span>escapeRegExp
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.extend">
+            function <span class="apidocSignatureSpan">github.util.</span>extend
+            <span class="apidocSignatureSpan">(dest, src, noOverwrite)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.isFalse">
+            function <span class="apidocSignatureSpan">github.util.</span>isFalse
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.isTrue">
+            function <span class="apidocSignatureSpan">github.util.</span>isTrue
+            <span class="apidocSignatureSpan">(c)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.log">
+            function <span class="apidocSignatureSpan">github.util.</span>log
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.util.toCamelCase">
+            function <span class="apidocSignatureSpan">github.util.</span>toCamelCase
+            <span class="apidocSignatureSpan">(str, upper)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.github" id="apidoc.module.github">module github</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.github.error" id="apidoc.module.github.error">module github.error</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.400" id="apidoc.element.github.error.400">
+        function <span class="apidocSignatureSpan">github.error.</span>400
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">400 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.401" id="apidoc.element.github.error.401">
+        function <span class="apidocSignatureSpan">github.error.</span>401
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">401 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.402" id="apidoc.element.github.error.402">
+        function <span class="apidocSignatureSpan">github.error.</span>402
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">402 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.403" id="apidoc.element.github.error.403">
+        function <span class="apidocSignatureSpan">github.error.</span>403
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">403 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.404" id="apidoc.element.github.error.404">
+        function <span class="apidocSignatureSpan">github.error.</span>404
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">404 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.405" id="apidoc.element.github.error.405">
+        function <span class="apidocSignatureSpan">github.error.</span>405
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">405 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.406" id="apidoc.element.github.error.406">
+        function <span class="apidocSignatureSpan">github.error.</span>406
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">406 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.407" id="apidoc.element.github.error.407">
+        function <span class="apidocSignatureSpan">github.error.</span>407
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">407 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.408" id="apidoc.element.github.error.408">
+        function <span class="apidocSignatureSpan">github.error.</span>408
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">408 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.409" id="apidoc.element.github.error.409">
+        function <span class="apidocSignatureSpan">github.error.</span>409
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">409 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.410" id="apidoc.element.github.error.410">
+        function <span class="apidocSignatureSpan">github.error.</span>410
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">410 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.411" id="apidoc.element.github.error.411">
+        function <span class="apidocSignatureSpan">github.error.</span>411
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">411 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.412" id="apidoc.element.github.error.412">
+        function <span class="apidocSignatureSpan">github.error.</span>412
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">412 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.413" id="apidoc.element.github.error.413">
+        function <span class="apidocSignatureSpan">github.error.</span>413
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">413 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.414" id="apidoc.element.github.error.414">
+        function <span class="apidocSignatureSpan">github.error.</span>414
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">414 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.415" id="apidoc.element.github.error.415">
+        function <span class="apidocSignatureSpan">github.error.</span>415
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">415 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.416" id="apidoc.element.github.error.416">
+        function <span class="apidocSignatureSpan">github.error.</span>416
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">416 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.417" id="apidoc.element.github.error.417">
+        function <span class="apidocSignatureSpan">github.error.</span>417
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">417 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.420" id="apidoc.element.github.error.420">
+        function <span class="apidocSignatureSpan">github.error.</span>420
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">420 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.422" id="apidoc.element.github.error.422">
+        function <span class="apidocSignatureSpan">github.error.</span>422
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">422 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.423" id="apidoc.element.github.error.423">
+        function <span class="apidocSignatureSpan">github.error.</span>423
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">423 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.424" id="apidoc.element.github.error.424">
+        function <span class="apidocSignatureSpan">github.error.</span>424
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">424 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.425" id="apidoc.element.github.error.425">
+        function <span class="apidocSignatureSpan">github.error.</span>425
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">425 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.426" id="apidoc.element.github.error.426">
+        function <span class="apidocSignatureSpan">github.error.</span>426
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">426 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.428" id="apidoc.element.github.error.428">
+        function <span class="apidocSignatureSpan">github.error.</span>428
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">428 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.429" id="apidoc.element.github.error.429">
+        function <span class="apidocSignatureSpan">github.error.</span>429
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">429 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.431" id="apidoc.element.github.error.431">
+        function <span class="apidocSignatureSpan">github.error.</span>431
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">431 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.444" id="apidoc.element.github.error.444">
+        function <span class="apidocSignatureSpan">github.error.</span>444
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">444 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.449" id="apidoc.element.github.error.449">
+        function <span class="apidocSignatureSpan">github.error.</span>449
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">449 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.499" id="apidoc.element.github.error.499">
+        function <span class="apidocSignatureSpan">github.error.</span>499
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">499 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.500" id="apidoc.element.github.error.500">
+        function <span class="apidocSignatureSpan">github.error.</span>500
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">500 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.501" id="apidoc.element.github.error.501">
+        function <span class="apidocSignatureSpan">github.error.</span>501
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">501 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.502" id="apidoc.element.github.error.502">
+        function <span class="apidocSignatureSpan">github.error.</span>502
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">502 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.503" id="apidoc.element.github.error.503">
+        function <span class="apidocSignatureSpan">github.error.</span>503
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">503 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.504" id="apidoc.element.github.error.504">
+        function <span class="apidocSignatureSpan">github.error.</span>504
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">504 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.505" id="apidoc.element.github.error.505">
+        function <span class="apidocSignatureSpan">github.error.</span>505
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">505 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.506" id="apidoc.element.github.error.506">
+        function <span class="apidocSignatureSpan">github.error.</span>506
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">506 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.507" id="apidoc.element.github.error.507">
+        function <span class="apidocSignatureSpan">github.error.</span>507
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">507 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.508" id="apidoc.element.github.error.508">
+        function <span class="apidocSignatureSpan">github.error.</span>508
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">508 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.509" id="apidoc.element.github.error.509">
+        function <span class="apidocSignatureSpan">github.error.</span>509
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">509 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.510" id="apidoc.element.github.error.510">
+        function <span class="apidocSignatureSpan">github.error.</span>510
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">510 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.511" id="apidoc.element.github.error.511">
+        function <span class="apidocSignatureSpan">github.error.</span>511
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">511 = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.BadGateway" id="apidoc.element.github.error.BadGateway">
+        function <span class="apidocSignatureSpan">github.error.</span>BadGateway
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">BadGateway = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.BadRequest" id="apidoc.element.github.error.BadRequest">
+        function <span class="apidocSignatureSpan">github.error.</span>BadRequest
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">BadRequest = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.BandwidthLimitExceeded" id="apidoc.element.github.error.BandwidthLimitExceeded">
+        function <span class="apidocSignatureSpan">github.error.</span>BandwidthLimitExceeded
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">BandwidthLimitExceeded = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.ClientClosedRequest" id="apidoc.element.github.error.ClientClosedRequest">
+        function <span class="apidocSignatureSpan">github.error.</span>ClientClosedRequest
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ClientClosedRequest = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Conflict" id="apidoc.element.github.error.Conflict">
+        function <span class="apidocSignatureSpan">github.error.</span>Conflict
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Conflict = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.EnhanceYourCalm" id="apidoc.element.github.error.EnhanceYourCalm">
+        function <span class="apidocSignatureSpan">github.error.</span>EnhanceYourCalm
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EnhanceYourCalm = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.ExpectationFailed" id="apidoc.element.github.error.ExpectationFailed">
+        function <span class="apidocSignatureSpan">github.error.</span>ExpectationFailed
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ExpectationFailed = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.FailedDependency" id="apidoc.element.github.error.FailedDependency">
+        function <span class="apidocSignatureSpan">github.error.</span>FailedDependency
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">FailedDependency = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Forbidden" id="apidoc.element.github.error.Forbidden">
+        function <span class="apidocSignatureSpan">github.error.</span>Forbidden
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Forbidden = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.GatewayTimeout" id="apidoc.element.github.error.GatewayTimeout">
+        function <span class="apidocSignatureSpan">github.error.</span>GatewayTimeout
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">GatewayTimeout = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Gone" id="apidoc.element.github.error.Gone">
+        function <span class="apidocSignatureSpan">github.error.</span>Gone
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Gone = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.HttpError" id="apidoc.element.github.error.HttpError">
+        function <span class="apidocSignatureSpan">github.error.</span>HttpError
+        <span class="apidocSignatureSpan">(message, code, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HttpError = function (message, code, headers) {
+    Error.call(this, message);
+    //Error.captureStackTrace(this, arguments.callee);
+    this.message = message;
+    this.code = code;
+    this.status = statusCodes[code];
+    this.headers = headers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.HttpVersionNotSupported" id="apidoc.element.github.error.HttpVersionNotSupported">
+        function <span class="apidocSignatureSpan">github.error.</span>HttpVersionNotSupported
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HttpVersionNotSupported = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.InsufficientStorage" id="apidoc.element.github.error.InsufficientStorage">
+        function <span class="apidocSignatureSpan">github.error.</span>InsufficientStorage
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">InsufficientStorage = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.InternalServerError" id="apidoc.element.github.error.InternalServerError">
+        function <span class="apidocSignatureSpan">github.error.</span>InternalServerError
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">InternalServerError = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.LengthRequired" id="apidoc.element.github.error.LengthRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>LengthRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LengthRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Locked" id="apidoc.element.github.error.Locked">
+        function <span class="apidocSignatureSpan">github.error.</span>Locked
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Locked = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.LoopDetected" id="apidoc.element.github.error.LoopDetected">
+        function <span class="apidocSignatureSpan">github.error.</span>LoopDetected
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">LoopDetected = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.MethodNotAllowed" id="apidoc.element.github.error.MethodNotAllowed">
+        function <span class="apidocSignatureSpan">github.error.</span>MethodNotAllowed
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MethodNotAllowed = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NetworkAuthenticationRequired" id="apidoc.element.github.error.NetworkAuthenticationRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>NetworkAuthenticationRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NetworkAuthenticationRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NoResponse" id="apidoc.element.github.error.NoResponse">
+        function <span class="apidocSignatureSpan">github.error.</span>NoResponse
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NoResponse = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NotAcceptable" id="apidoc.element.github.error.NotAcceptable">
+        function <span class="apidocSignatureSpan">github.error.</span>NotAcceptable
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NotAcceptable = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NotExtended" id="apidoc.element.github.error.NotExtended">
+        function <span class="apidocSignatureSpan">github.error.</span>NotExtended
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NotExtended = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NotFound" id="apidoc.element.github.error.NotFound">
+        function <span class="apidocSignatureSpan">github.error.</span>NotFound
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NotFound = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.NotImplemented" id="apidoc.element.github.error.NotImplemented">
+        function <span class="apidocSignatureSpan">github.error.</span>NotImplemented
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">NotImplemented = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.PaymentRequired" id="apidoc.element.github.error.PaymentRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>PaymentRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">PaymentRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.PreconditionFailed" id="apidoc.element.github.error.PreconditionFailed">
+        function <span class="apidocSignatureSpan">github.error.</span>PreconditionFailed
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">PreconditionFailed = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.PreconditionRequired" id="apidoc.element.github.error.PreconditionRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>PreconditionRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">PreconditionRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.ProxyAuthenticationRequired" id="apidoc.element.github.error.ProxyAuthenticationRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>ProxyAuthenticationRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ProxyAuthenticationRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Request-uriTooLong" id="apidoc.element.github.error.Request-uriTooLong">
+        function <span class="apidocSignatureSpan">github.error.</span>Request-uriTooLong
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Request-uriTooLong = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.RequestEntityTooLarge" id="apidoc.element.github.error.RequestEntityTooLarge">
+        function <span class="apidocSignatureSpan">github.error.</span>RequestEntityTooLarge
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RequestEntityTooLarge = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.RequestHeaderFieldsTooLarge" id="apidoc.element.github.error.RequestHeaderFieldsTooLarge">
+        function <span class="apidocSignatureSpan">github.error.</span>RequestHeaderFieldsTooLarge
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RequestHeaderFieldsTooLarge = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.RequestTimeout" id="apidoc.element.github.error.RequestTimeout">
+        function <span class="apidocSignatureSpan">github.error.</span>RequestTimeout
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RequestTimeout = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.RequestedRangeNotSatisfiable" id="apidoc.element.github.error.RequestedRangeNotSatisfiable">
+        function <span class="apidocSignatureSpan">github.error.</span>RequestedRangeNotSatisfiable
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RequestedRangeNotSatisfiable = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.RetryWith" id="apidoc.element.github.error.RetryWith">
+        function <span class="apidocSignatureSpan">github.error.</span>RetryWith
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RetryWith = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.ServiceUnavailable" id="apidoc.element.github.error.ServiceUnavailable">
+        function <span class="apidocSignatureSpan">github.error.</span>ServiceUnavailable
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ServiceUnavailable = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.TooManyRequests" id="apidoc.element.github.error.TooManyRequests">
+        function <span class="apidocSignatureSpan">github.error.</span>TooManyRequests
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TooManyRequests = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.Unauthorized" id="apidoc.element.github.error.Unauthorized">
+        function <span class="apidocSignatureSpan">github.error.</span>Unauthorized
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Unauthorized = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.UnorderedCollection" id="apidoc.element.github.error.UnorderedCollection">
+        function <span class="apidocSignatureSpan">github.error.</span>UnorderedCollection
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UnorderedCollection = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.UnprocessableEntity" id="apidoc.element.github.error.UnprocessableEntity">
+        function <span class="apidocSignatureSpan">github.error.</span>UnprocessableEntity
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UnprocessableEntity = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.UnsupportedMediaType" id="apidoc.element.github.error.UnsupportedMediaType">
+        function <span class="apidocSignatureSpan">github.error.</span>UnsupportedMediaType
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UnsupportedMediaType = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.UpgradeRequired" id="apidoc.element.github.error.UpgradeRequired">
+        function <span class="apidocSignatureSpan">github.error.</span>UpgradeRequired
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UpgradeRequired = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.error.VariantAlsoNegotiates" id="apidoc.element.github.error.VariantAlsoNegotiates">
+        function <span class="apidocSignatureSpan">github.error.</span>VariantAlsoNegotiates
+        <span class="apidocSignatureSpan">(msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">VariantAlsoNegotiates = function (msg) {
+    this.defaultMessage = defaultMsg;
+    exports.HttpError.call(this, msg || status + &#x22;: &#x22; + defaultMsg, status);
+
+    if (status &#x3e;= 500)
+        Error.captureStackTrace(this, arguments.callee);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.github.util" id="apidoc.module.github.util">module github.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.escapeRegExp" id="apidoc.element.github.util.escapeRegExp">
+        function <span class="apidocSignatureSpan">github.util.</span>escapeRegExp
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeRegExp = function (str) {
+    return str.replace(/([.*+?^${}()|[\]\/\\])/g, &#x27;\\$1&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.extend" id="apidoc.element.github.util.extend">
+        function <span class="apidocSignatureSpan">github.util.</span>extend
+        <span class="apidocSignatureSpan">(dest, src, noOverwrite)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (dest, src, noOverwrite) {
+    for (var prop in src) {
+        if (!noOverwrite || typeof dest[prop] == &#x22;undefined&#x22;) {
+            dest[prop] = src[prop];
+        }
+    }
+    return dest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.isFalse" id="apidoc.element.github.util.isFalse">
+        function <span class="apidocSignatureSpan">github.util.</span>isFalse
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isFalse = function (c){
+    return (c === false || c === &#x22;false&#x22; || c === &#x22;off&#x22; || c === 0 || c === &#x22;0&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.isTrue" id="apidoc.element.github.util.isTrue">
+        function <span class="apidocSignatureSpan">github.util.</span>isTrue
+        <span class="apidocSignatureSpan">(c)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isTrue = function (c){
+    return (c === true || c === &#x22;true&#x22; || c === &#x22;on&#x22; || typeof c == &#x22;number&#x22; &#x26;&#x26; c &#x3e; 0 || c === &#x22;1&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.log" id="apidoc.element.github.util.log">
+        function <span class="apidocSignatureSpan">github.util.</span>log
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function () {
+    var args = _slice.call(arguments);
+    var lastArg = args[args.length - 1];
+
+    var level = levels[lastArg] ? args.pop() : &#x22;info&#x22;;
+    if (!args.length) {
+        return;
+    }
+
+    var msg = args.map(function(arg) {
+        return typeof arg != &#x22;string&#x22; ? Util.inspect(arg) : arg;
+    }).join(&#x22; &#x22;);
+    var pfx = levels[level][0] + &#x22;[&#x22; + level + &#x22;]&#x22; + levels[level][1];
+
+    msg.split(&#x22;\n&#x22;).forEach(function(line) {
+        console.log(pfx + &#x22; &#x22; + line);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+github.users.getFollowingForUser({
+    // optional
+    // headers: {
+    //     &#x22;cookie&#x22;: &#x22;blahblah&#x22;
+    // },
+    username: &#x22;defunkt&#x22;
+}, function(err, res) {
+    console.<span class="apidocCodeKeywordSpan">log</span>(JSON.stringify(res));
+});
+```
+
+## Pagination
+
+There are a few pagination-related methods:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.util.toCamelCase" id="apidoc.element.github.util.toCamelCase">
+        function <span class="apidocSignatureSpan">github.util.</span>toCamelCase
+        <span class="apidocSignatureSpan">(str, upper)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toCamelCase = function (str, upper) {
+    str = str.toLowerCase().replace(/(?:(^.)|(\s+.)|(-.))/g, function(match) {
+        return match.charAt(match.length - 1).toUpperCase();
+    });
+    if (upper) {
+        return str;
+    }
+    return str.charAt(0).toLowerCase() + str.substr(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ *      - upper (Boolean): set to `true` to transform to CamelCase
+ *
+ *  Transform a string that contains spaces or dashes to camelCase. If `upper` is
+ *  set to `true`, the string will be transformed to CamelCase.
+ *
+ *  Example:
+ *
+ *      Util.<span class="apidocCodeKeywordSpan">toCamelCase</span>(&#x22;why U no-work&#x22;); // returns &#x27;whyUNoWork&#x27
+;
+ *      Util.toCamelCase(&#x22;I U no-work&#x22;, true); // returns &#x27;WhyUNoWork&#x27;
+ **/
+exports.toCamelCase = function(str, upper) {
+str = str.toLowerCase().replace(/(?:(^.)|(\s+.)|(-.))/g, function(match) {
+    return match.charAt(match.length - 1).toUpperCase();
+});
+if (upper) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
