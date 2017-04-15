@@ -1,9 +1,9 @@
 # api documentation for  [github (v9.2.0)](https://github.com/mikedeboer/node-github)  [![npm package](https://img.shields.io/npm/v/npmdoc-github.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-github) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-github.svg)](https://travis-ci.org/npmdoc/node-npmdoc-github)
 #### NodeJS wrapper for the GitHub API
 
-[![NPM](https://nodei.co/npm/github.png?downloads=true)](https://www.npmjs.com/package/github)
+[![NPM](https://nodei.co/npm/github.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/github)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-github/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-github_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-github/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-github/build/screenCapture.buildCi.browser.apidoc.html.png)](https://npmdoc.github.io/node-npmdoc-github/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-github/build/screenCapture.npmPackageListing.svg)
 
@@ -25,24 +25,20 @@
         }
     },
     "author": {
-        "name": "Mike de Boer",
-        "email": "info@mikedeboer.nl"
+        "name": "Mike de Boer"
     },
     "bugs": {
         "url": "https://github.com/mikedeboer/node-github/issues"
     },
     "contributors": [
         {
-            "name": "Mike de Boer",
-            "email": "info@mikedeboer.nl"
+            "name": "Mike de Boer"
         },
         {
-            "name": "Fabian Jakobs",
-            "email": "fabian@c9.io"
+            "name": "Fabian Jakobs"
         },
         {
-            "name": "Joe Gallo",
-            "email": "joe@brassafrax.com"
+            "name": "Joe Gallo"
         }
     ],
     "dependencies": {
@@ -76,17 +72,14 @@
     "main": "lib",
     "maintainers": [
         {
-            "name": "kaizensoze",
-            "email": "joe@brassafrax.com"
+            "name": "kaizensoze"
         },
         {
-            "name": "mikedeboer",
-            "email": "info@mikedeboer.nl"
+            "name": "mikedeboer"
         }
     ],
     "name": "github",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/mikedeboer/node-github.git"
@@ -104,10 +97,67 @@
 # <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
 
 #### [module github](#apidoc.module.github)
+1.  [function <span class="apidocSignatureSpan"></span>github (config)](#apidoc.element.github.github)
+1.  [function <span class="apidocSignatureSpan">github.</span>toString ()](#apidoc.element.github.toString)
 
 
 
 # <a name="apidoc.module.github"></a>[module github](#apidoc.module.github)
+
+#### <a name="apidoc.element.github.github"></a>[function <span class="apidocSignatureSpan"></span>github (config)](#apidoc.element.github.github)
+- description and source-code
+```javascript
+github = function (config) {
+    if (!(this instanceof Client)) {
+        return new Client(config);
+    }
+
+    config = config || {}
+    config.headers = config.headers || {};
+    this.config = config;
+    this.debug = Util.isTrue(config.debug);
+    this.Promise = config.Promise || config.promise || Promise;
+
+    this.routes = JSON.parse(fs.readFileSync(__dirname + "/routes.json", "utf8"));
+
+    var pathPrefix = "";
+    // Check if a prefix is passed in the config and strip any leading or trailing slashes from it.
+    if (typeof config.pathPrefix == "string") {
+        pathPrefix = "/" + config.pathPrefix.replace(/(^[\/]+|[\/]+$)/g, "");
+        this.config.pathPrefix = pathPrefix;
+    }
+
+    // store mapping of accept header to preview api endpoints
+    var mediaHash  = this.routes.defines.acceptTree;
+    var mediaTypes = {};
+
+    for (var accept in mediaHash) {
+        for (var route in mediaHash[accept]) {
+            mediaTypes[mediaHash[accept][route]] = accept;
+        }
+    }
+
+    this.acceptUrls = mediaTypes;
+
+    this.setupRoutes();
+}
+```
+- example usage
+```shell
+n/a
+```
+
+#### <a name="apidoc.element.github.toString"></a>[function <span class="apidocSignatureSpan">github.</span>toString ()](#apidoc.element.github.toString)
+- description and source-code
+```javascript
+toString = function () {
+    return toString;
+}
+```
+- example usage
+```shell
+n/a
+```
 
 
 
