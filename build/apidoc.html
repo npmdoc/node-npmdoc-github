@@ -61,12 +61,91 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.github">module github</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.github">
+            function <span class="apidocSignatureSpan"></span>github
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.github.toString">
+            function <span class="apidocSignatureSpan">github.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.github" id="apidoc.module.github">module github</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.github.github" id="apidoc.element.github.github">
+        function <span class="apidocSignatureSpan"></span>github
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">github = function (config) {
+    if (!(this instanceof Client)) {
+        return new Client(config);
+    }
+
+    config = config || {}
+    config.headers = config.headers || {};
+    this.config = config;
+    this.debug = Util.isTrue(config.debug);
+    this.Promise = config.Promise || config.promise || Promise;
+
+    this.routes = JSON.parse(fs.readFileSync(__dirname + &#x22;/routes.json&#x22;, &#x22;utf8&#x22;));
+
+    var pathPrefix = &#x22;&#x22;;
+    // Check if a prefix is passed in the config and strip any leading or trailing slashes from it.
+    if (typeof config.pathPrefix == &#x22;string&#x22;) {
+        pathPrefix = &#x22;/&#x22; + config.pathPrefix.replace(/(^[\/]+|[\/]+$)/g, &#x22;&#x22;);
+        this.config.pathPrefix = pathPrefix;
+    }
+
+    // store mapping of accept header to preview api endpoints
+    var mediaHash  = this.routes.defines.acceptTree;
+    var mediaTypes = {};
+
+    for (var accept in mediaHash) {
+        for (var route in mediaHash[accept]) {
+            mediaTypes[mediaHash[accept][route]] = accept;
+        }
+    }
+
+    this.acceptUrls = mediaTypes;
+
+    this.setupRoutes();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.github.toString" id="apidoc.element.github.toString">
+        function <span class="apidocSignatureSpan">github.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return toString;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
