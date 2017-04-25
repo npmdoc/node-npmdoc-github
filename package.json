@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "github",
-    "description": "api documentation for [github (v9.2.0)](https://github.com/mikedeboer/node-github) [![npm package](https://img.shields.io/npm/v/npmdoc-github.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-github) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-github.svg)](https://travis-ci.org/npmdoc/node-npmdoc-github)",
+    "description": "#### basic api documentation for  [github (v9.2.0)](https://github.com/mikedeboer/node-github)  [![npm package](https://img.shields.io/npm/v/npmdoc-github.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-github) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-github.svg)](https://travis-ci.org/npmdoc/node-npmdoc-github)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "github": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.4"
+    "version": "2017.4.26"
 }
